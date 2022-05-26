@@ -21,6 +21,7 @@
 	--projects-border: #EEEEEE;
 	--clients-logo: #AFB1B8;
 	--footer-links-bcgd: rgba(255, 255, 255, 0.1);
+	--backdrop-bckg: rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -77,11 +78,11 @@ p {
 	color: var(--company-color);
 }
  .nav-link:not(.current):hover::before {
-	opacity: 1;
+	transform: scale(1);
  }
  .nav-link::before {
-	opacity: 0;
-	transition-property: opacity;
+	transform: scale(0);
+	transition-property: transform;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  }
@@ -99,7 +100,7 @@ p {
 	background-size: contain;
 	position: absolute;
 	border-radius: 2px;
-	bottom: -0.8px;
+	bottom: -1.3px;
 	left: 0;
 }
 .linkhov.current {
@@ -292,13 +293,14 @@ header {
 	padding: 10px 32px;
 	min-width: 200px;
 	border: 0px;
-	/* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 	background-color: var(--company-color);
 	color: var(--background-main);
 	font-size: 16px;
 	font-weight: 700;
 	line-height: 1.875;
+	letter-spacing: 0.06em;
 }
 .hero-button:hover ,
 .hero-button:focus {
@@ -525,7 +527,7 @@ header {
 	margin-bottom: 30px;
 }
 
-
+.modal-button-c,
 .filter ,
 .hero-button {
 	cursor: pointer;
@@ -618,4 +620,57 @@ header {
 }
 .overlay-text {
 	/* width: 322px; */
+}
+
+/* modalka */
+
+.backdrop.is-hidden{
+	opacity: 0;
+	pointer-events: none;
+}
+
+.backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	transition: opacity;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	opacity: 1;
+	width: 100%;
+	height: 100%;
+	background-color: var(--backdrop-bckg) ;
+}
+.modal-button-c {
+	height: 30px;
+	width: 30px;
+	display: flex;
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--background-main);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+
+}
+.backdrop.is-hidden > .modal {
+	/* transform: scale(0.5); */
+	transform: translate(50% , 50%) translateY(-150px) scale(0.8) ;
+}
+.modal {
+	transform-origin: center center;
+	transition-property: transform;
+	transition-duration: 250ms;
+	position: absolute;
+	bottom: 50%;
+	right: 50%;
+	transform: translate(50% , 50%);
+	width: 528px;
+	height: 581px;
+	background-color: var(--background-main);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	outline: 1px yellow;
 }
