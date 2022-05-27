@@ -424,7 +424,7 @@ header {
 	/* fill: var(--background-main); */
 }
 .link-icon-team {
-	transition-property: background-color color;
+	transition-property: background-color , color;
 	color: var(--clients-logo);
 	display: flex;
 	justify-content: center;
@@ -432,7 +432,7 @@ header {
 	width: 44px;
 	height: 44px;
 	/* fill: var(--clients-logo); */
-	padding: 12px 0px;
+	/* padding: 12px 0px; */
 	border-radius: 50%;
 }
 .team-limks-item:not(:last-child) {
@@ -538,7 +538,7 @@ header {
 	cursor: pointer;
 }
 .filter {
-	transition-property: background-color box-shadow color ;
+	transition-property: background-color , box-shadow , color ;
 	padding: 6px 22px ;
 	/* display: block; */
 	border-radius: 4px;
