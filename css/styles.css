@@ -174,6 +174,7 @@ p {
 }
 .nav-link,
 .contact-link {
+	transition-property: color;
 	font-weight: 500;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
@@ -209,6 +210,7 @@ header {
 	margin-bottom: 9px;
 }
 .contact-link-foot {
+	transition-property: color;
 	color: var(--footer-address);
 }
 .print-address {
@@ -248,6 +250,7 @@ header {
 	margin-bottom: 20px;
 }
 .join-link {
+	transition-property: background-color;
 	display: flex;
 	width: 44px;
 	height: 44px;
@@ -291,6 +294,7 @@ header {
 	/* outline: solid yellow; */
 }
 .hero-button {
+	transition-property: background-color;
 	padding: 10px 32px;
 	min-width: 200px;
 	border: 0px;
@@ -420,6 +424,7 @@ header {
 	/* fill: var(--background-main); */
 }
 .link-icon-team {
+	transition-property: background-color color;
 	color: var(--clients-logo);
 	display: flex;
 	justify-content: center;
@@ -533,6 +538,7 @@ header {
 	cursor: pointer;
 }
 .filter {
+	transition-property: background-color box-shadow color ;
 	padding: 6px 22px ;
 	/* display: block; */
 	border-radius: 4px;
@@ -592,6 +598,7 @@ header {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-link {
+	transition-property: box-shadow;
 	display: block;
 }
 .portfolio-thumb {
@@ -631,9 +638,9 @@ header {
 	position: fixed;
 	top: 0;
 	right: 0;
-	transition: opacity;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-property: opacity;
+	/* transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 	opacity: 1;
 	width: 100%;
 	height: 100%;
@@ -660,7 +667,8 @@ header {
 .modal {
 	transform-origin: center center;
 	transition-property: transform;
-	transition-duration: 250ms;
+	/* transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 	position: absolute;
 	bottom: 50%;
 	right: 50%;
